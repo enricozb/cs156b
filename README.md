@@ -1,1 +1,1 @@
-# cs156b
+# Caltech CS 156b
