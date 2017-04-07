@@ -1,6 +1,7 @@
-# Caltech CS 156b
+# Caltech CS 156b: The Netflix Competition
 
-Netflix competition code Caltech's CS 156b course. Team members are:
+ - [Michelle Anthony](https://github.com/michelle-aa)
  - [Enrico Borba](https://github.com/enricozb)
  - Julia Deacon
  - [Claire Goeckner-Wald](https://github.com/cgoecknerwald)
+ - Bianca Yang
