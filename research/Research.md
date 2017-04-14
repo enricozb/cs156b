@@ -1,4 +1,4 @@
-# Research Links
+# Research
 Read the guidelines at the bottom before contributing for the first time.
 
 ## Yaser Recommendations
