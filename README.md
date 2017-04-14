@@ -50,17 +50,17 @@ These will change as we progress. Use the *mm/dd* to indicate the absolute last 
 Keep it short.
 
 | Week    | Anthony | Borba                                      | Deacon                     | Goeckner-Wald               | Yang                         |
-|---------|---------|--------------------------------------------|----------------------------|-----------------------------|------------------------------|
-| Week 1  | -       | Set up repo                                | Timelines & workloads      | Readme.md, Links.md         | Timelines & workloads        |
-| Week 2  | SVM     | Create set-up test file. Parsing, SVD, RNN | Deep Learning, Neural Nets | k-NN, Boltzmann Machines    | Decision Trees (Boosted, RF) |
-| Week 3  | -       | -                                          | -                          | -                           | -                            |
-| Week 4  | -       | -                                          | -                          | -                           | -                            |
-| Week 5  | -       | -                                          | -                          | -                           | -                            |
-| Week 6  | -       | -                                          | -                          | -                           | -                            |
-| Week 7  | -       | -                                          | -                          | -                           | -                            |
-| Week 8  | -       | -                                          | -                          | -                           | -                            |
-| Week 9  | -       | -                                          | -                          | -                           | -                            |
-| Week 10 | -       | -                                          | -                          | -                           | -                            |
+|:-------:|---------|--------------------------------------------|----------------------------|-----------------------------|------------------------------|
+|      1  | -       | Set up repo                                | Timelines & workloads      | Readme.md, Links.md         | Timelines & workloads        |
+|      2  | SVM     | Create set-up test file. Parsing, SVD, RNN | Deep Learning, Neural Nets | k-NN, Boltzmann Machines    | Decision Trees (Boosted, RF) |
+|      3  | -       | -                                          | -                          | -                           | -                            |
+|      4  | -       | -                                          | -                          | -                           | -                            |
+|      5  | -       | -                                          | -                          | -                           | -                            |
+|      6  | -       | -                                          | -                          | -                           | -                            |
+|      7  | -       | -                                          | -                          | -                           | -                            |
+|      8  | -       | -                                          | -                          | -                           | -                            |
+|      9  | -       | -                                          | -                          | -                           | -                            |
+|      10 | -       | -                                          | -                          | -                           | -                            |
 
 
 
