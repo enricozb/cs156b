@@ -36,6 +36,7 @@ These will change as we progress. Use the *mm/dd* to indicate the absolute last 
 
  - [ ] *04/14:* Post a test install file (Borba)
  - [ ] *04/17:* Set-up MLPack, Boost, CMake, C++ 14 for everyone
+ - [ ] *04/24:* Implement abstract model class
  - [ ] *mm/dd:* Parse data
  - [ ] *mm/dd:* Research models & techniques
  - [ ] *mm/dd:* Formalize code structure
