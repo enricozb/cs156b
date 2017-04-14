@@ -1,5 +1,5 @@
 # Research Links
-Read the guidelines at the bottom before editting.
+Read the guidelines at the bottom before contributing for the first time.
 
 ### Yaser Recommendations
 
@@ -11,12 +11,13 @@ Read the guidelines at the bottom before editting.
 ### Restricted Boltzmann Machines
 * [Introduction to Restricted Boltzmann Machines](http://blog.echen.me/2011/07/18/introduction-to-restricted-boltzmann-machines/)
 
-### How to Use this sheet
+### How to Use This Sheet
 
 * Markdown cheatsheet is [here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#emphasis)
 * Cross-list papers as necessary
 * If a paper is not available online easily, upload it as a PDF to this folder ("research")
+* Use the following style to organize papers:
 
-### Category of Learning
-* [Ye Old Linke](http://blog.echen.me/2011/07/18/introduction-to-restricted-boltzmann-machines/)
+### Example (Some category of learning)
+* [Example Link](http://blog.echen.me/2011/07/18/introduction-to-restricted-boltzmann-machines/)
 
