@@ -31,18 +31,67 @@ This project uses C++ 14, following the [Google C++ Style Guide](https://google.
 
 There will be an abstract model class, `model.cc` and `model.h` that all models must inherit. The `model` class will include functions `train`, `predict`, `serialize` and `deserialize` functions that must be implemented in all subclasses.
 
-## Tasks & Goals
-These will change as we progress.
+## Tasks & Dates
+These will change as we progress. Use the *mm/dd* to indicate the absolute last date to finish by.
 
- - [ ] Set-up MLPack, Boost, CMake, C++ 14 for everyone
- - [ ] Parse data
- - [ ] Research models & techniques
- - [ ] Formalize code structure
- - [ ] Implement code
- - [ ] Perform better than Netflix R&D team performed in 2005
- - [ ] Decide on model(s) & technique(s)
- - [ ] Final submission
- - [ ] Make a project website to showcase work (optional)
+ - [ ] *04/14:* Post a test install file (Borba)
+ - [ ] *04/17:* Set-up MLPack, Boost, CMake, C++ 14 for everyone
+ - [ ] *mm/dd:* Parse data
+ - [ ] *mm/dd:* Research models & techniques
+ - [ ] *mm/dd:* Formalize code structure
+ - [ ] *05/02:* Implement models assigned in week 2
+ - [ ] *04/25:* Perform better than Netflix R&D team performed in 2005
+ - [ ] *06/02:* Discover about 10 imaginative & novel models 
+ - [ ] *mm/dd:* Decide on model(s) & technique(s)
+ - [ ] *mm/dd:* Final submission
+ - [ ] *mm/dd:* Make a project website to showcase work (optional)
+
+## Weekly Assignments 
+Keep it short.
+
+| Week    | Anthony | Borba                                      | Deacon                     | Goeckner-Wald               | Yang                         |
+|---------|---------|--------------------------------------------|----------------------------|-----------------------------|------------------------------|
+| Week 1  | -       | Set up repo                                | Timelines & workloads      | Readme.md, Links.md         | Timelines & workloads        |
+| Week 2  | SVM     | Create set-up test file. Parsing, SVD, RNN | Deep Learning, Neural Nets | k-NN, Boltzmann Machines    | Decision Trees (Boosted, RF) |
+| Week 3  | -       | -                                          | -                          | -                           | -                            |
+| Week 4  | -       | -                                          | -                          | -                           | -                            |
+| Week 5  | -       | -                                          | -                          | -                           | -                            |
+| Week 6  | -       | -                                          | -                          | -                           | -                            |
+| Week 7  | -       | -                                          | -                          | -                           | -                            |
+| Week 8  | -       | -                                          | -                          | -                           | -                            |
+| Week 9  | -       | -                                          | -                          | -                           | -                            |
+| Week 10 | -       | -                                          | -                          | -                           | -                            |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
