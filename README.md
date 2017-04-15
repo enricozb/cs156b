@@ -29,7 +29,7 @@ This project uses C++ 14, following the [Google C++ Style Guide](https://google.
 
 ## Structure
 
-There will be an abstract model class, `model.cc` and `model.h` that all models must inherit. The `model` class will include functions `train`, `predict`, `serialize` and `deserialize` functions that must be implemented in all subclasses.
+There will be an abstract model class, `model.cpp` and `model.h` that all models must inherit. The `model` class will include functions `train`, `predict`, `serialize` and `deserialize` functions that must be implemented in all subclasses.
 
 ## Tasks & Dates
 These will change as we progress. Use the *mm/dd* to indicate the absolute last date to finish by.
