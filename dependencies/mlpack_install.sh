@@ -5,6 +5,15 @@
 # ensure /usr/lib/include is searched
 xcode-select install
 
+# install cmake
+curl -O "https://cmake.org/files/v3.8/cmake-3.8.0.tar.gz"
+tar -xf cmake-3.8.0.tar.gz
+cd cmake-3.8.0
+./bootstrap
+make
+make install
+cd ..
+
 # install armadillo
 curl -L "https://sourceforge.net/projects/arma/files/armadillo-7.800.2.tar.xz" > "armadillo-7.800.2.tar.xz"
 tar zxvf armadillo-7.800.2.tar.xz
@@ -24,15 +33,6 @@ sudo ./b2 install --prefix=/usr/local
 cd ..
 
 export $BOOST_ROOT /usr/local/boost
-
-# install cmake
-curl -O "https://cmake.org/files/v3.8/cmake-3.8.0.tar.gz"
-tar -xf cmake-3.8.0.tar.gz
-cd cmake-3.8.0
-./bootstrap
-make
-make install
-cd..
 
 # install mlpack
 git clone https://github.com/mlpack/mlpack
