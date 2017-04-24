@@ -27,10 +27,6 @@ The "research" folder will be used to store research papers & other handouts tha
 
 This project uses C++ 14, following the [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html). 
 
-## Structure
-
-There will be an abstract model class, `model.cpp` and `model.h` that all models must inherit. The `model` class will include functions `train`, `predict`, `serialize` and `deserialize` functions that must be implemented in all subclasses.
-
 ## Weekly Assignments 
 Keep it short.
 
