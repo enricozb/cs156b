@@ -36,6 +36,7 @@ Read the guidelines at the bottom before contributing for the first time.
 * Information
 
 ### Decision Trees (DT) (Boosted or Random Forest)
+* [mlpack Decision Tree documentation](http://www.mlpack.org/docs/mlpack-2.2.1/doxygen.php?doc=classmlpack_1_1det_1_1DTree.html)
 * [Link text](URL)
 * Information
 

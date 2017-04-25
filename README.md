@@ -27,26 +27,6 @@ The "research" folder will be used to store research papers & other handouts tha
 
 This project uses C++ 14, following the [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html). 
 
-## Structure
-
-There will be an abstract model class, `model.cpp` and `model.h` that all models must inherit. The `model` class will include functions `train`, `predict`, `serialize` and `deserialize` functions that must be implemented in all subclasses.
-
-## Tasks & Dates
-These will change as we progress. Use the *mm/dd* to indicate the absolute last date to finish by.
-
- - [ ] *04/14:* Post a test install file (Borba)
- - [ ] *04/17:* Set-up MLPack, Boost, CMake, C++ 14 for everyone
- - [ ] *04/24:* Implement abstract model class
- - [ ] *mm/dd:* Parse data
- - [ ] *mm/dd:* Research models & techniques
- - [ ] *mm/dd:* Formalize code structure
- - [ ] *05/02:* Implement models assigned in week 2
- - [ ] *04/25:* Perform better than Netflix R&D team performed in 2005
- - [ ] *06/02:* Discover about 10 imaginative & novel models 
- - [ ] *mm/dd:* Decide on model(s) & technique(s)
- - [ ] *mm/dd:* Final submission
- - [ ] *mm/dd:* Make a project website to showcase work (optional)
-
 ## Weekly Assignments 
 Keep it short.
 
