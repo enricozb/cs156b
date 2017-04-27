@@ -6,6 +6,9 @@
  - [Julia Deacon](https://github.com/jcdeacon)
  - [Claire Goeckner-Wald](http://claire.work/)
  - [Bianca Yang](https://github.com/xrdt)
+ 
+#### Google Drive:
+Google drive folder with presentations is [here](https://drive.google.com/open?id=0B-94OKifRzqxNmp4MW55RFl4ZWc). 
 
 
 ## Class Description
