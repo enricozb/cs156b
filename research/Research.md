@@ -25,7 +25,8 @@ Read the guidelines at the bottom before contributing for the first time.
 * Information
 
 ### *k*-Nearest Neighbors (kNN)
-* [Link text](URL)
+* [Probabilistic Matrix Factorization](
+http://www.cs.toronto.edu/~rsalakhu/papers/nips07_pmf.pdf)
 * Information
 
 ### Restricted Boltzmann Machines
