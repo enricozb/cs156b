@@ -36,8 +36,8 @@ Keep it short.
 | Week | Anthony   | Borba                                      | Deacon                     | Goeckner-Wald               | Yang                         |
 |:----:|-----------|--------------------------------------------|----------------------------|-----------------------------|------------------------------|
 |   1  | -         | Set up repo                                | Timelines & workloads      | Readme.md, Links.md         | Timelines & workloads        |
-|   2  | SVM       | Create set-up test file. Parsing, SVD, RNN | Deep Learning, Neural Nets | k-NN, Boltzmann Machines    | Decision Trees (Boosted, RF) |
-|   3  | -         | -                                          | -                          | -                           | -                            |
+|   2  | SVM       | Create set-up test file. Parsing, SVD, RNN | Deep Learning, Neural Nets | k-NN, Boltzmann Machines, issues & milestones    | Decision Trees (Boosted, RF) |
+|   3  | More SVM  | - Parsing, SVD                             | Deep Learning, Neural Nets | k-NN, Boltzmann Machines, presentation   | Decision Trees (Boosted, RF)                            |
 |   4  | -         | -                                          | -                          | -                           | -                            |
 |   5  | -         | -                                          | -                          | -                           | -                            |
 |   6  | -         | -                                          | -                          | -                           | -                            |
