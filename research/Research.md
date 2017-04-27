@@ -8,11 +8,12 @@ Read the guidelines at the bottom before contributing for the first time.
 * [Netflix Recommendations: Beyond the 5 stars (Part 2)](http://techblog.netflix.com/2012/06/netflix-recommendations-beyond-5-stars.html)
 * [Introduction to Restricted Boltzmann Machines](http://blog.echen.me/2011/07/18/introduction-to-restricted-boltzmann-machines/)
 
-### Parsing data
-* [Link text](URL)
+### Single Value Decomposition (SVD)
+* [Probabilistic Matrix Factorization](
+http://www.cs.toronto.edu/~rsalakhu/papers/nips07_pmf.pdf)
 * Information
 
-### Single Value Decomposition (SVD)
+### Parsing data
 * [Link text](URL)
 * Information
 
@@ -25,8 +26,7 @@ Read the guidelines at the bottom before contributing for the first time.
 * Information
 
 ### *k*-Nearest Neighbors (kNN)
-* [Probabilistic Matrix Factorization](
-http://www.cs.toronto.edu/~rsalakhu/papers/nips07_pmf.pdf)
+* [Link text](URL)
 * Information
 
 ### Restricted Boltzmann Machines
