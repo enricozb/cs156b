@@ -18,7 +18,7 @@ http://www.cs.toronto.edu/~rsalakhu/papers/nips07_pmf.pdf)
 * Information
 
 ### Recurrent Neural Networks (RNN)
-* [Link text](URL)
+* [The Unreasonable Effectiveness of Recurrent Neural Networks](http://karpathy.github.io/2015/05/21/rnn-effectiveness/)
 * Information
 
 ### Deep Learning / Neural Nets
