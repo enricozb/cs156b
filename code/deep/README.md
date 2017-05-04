@@ -1,6 +1,20 @@
 # Deep Learning
 Contains trained neural networks
 
+## Caching Data
+Use `data_parse.py` to cache the data for quick training access. Only cache
+what you need. If you need `base`, `valid`, and `qual`, do
+
+```python
+import data_parse
+data_parse.parse('base', 'valid', 'probe', 'qual')
+```
+
+## Training
+Simply running `train.py` will generate and save a model. A `prediction.txt`
+will also be generated with the `qual` inputs. For training, you must have
+`base`, `valid`, `probe`, and `qual` cached.
+
 ## Saving/Loading Models
 
 ### Saving

@@ -1,3 +1,7 @@
+# Don't push the pickled/raw datasets...
+data/
+*.p
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
