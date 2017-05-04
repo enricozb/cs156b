@@ -38,7 +38,6 @@ http://www.cs.toronto.edu/~rsalakhu/papers/nips07_pmf.pdf)
 
 ### Decision Trees (DT) (Boosted or Random Forest)
 * [mlpack Decision Tree documentation](http://www.mlpack.org/docs/mlpack-2.2.1/doxygen.php?doc=classmlpack_1_1det_1_1DTree.html)
-* [Link text](URL)
 * Information
 
 ### Decision Trees (DT)
@@ -46,8 +45,7 @@ http://www.cs.toronto.edu/~rsalakhu/papers/nips07_pmf.pdf)
 * Information
 
 ### Blending
-* [Slides Blending Techniques from Team BigChao](http://www.commendo.at/UserFiles/commendo/File/Presentation_GrandPrize.pdf)
-* [Link text](URL)
+* [Slides Blending Techniques from Team BigChaos](http://www.commendo.at/UserFiles/commendo/File/Presentation_GrandPrize.pdf)
 * Information
 
 ### Residual
