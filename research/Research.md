@@ -46,6 +46,7 @@ http://www.cs.toronto.edu/~rsalakhu/papers/nips07_pmf.pdf)
 * Information
 
 ### Blending
+* [Slides Blending Techniques from Team BigChao](http://www.commendo.at/UserFiles/commendo/File/Presentation_GrandPrize.pdf)
 * [Link text](URL)
 * Information
 
