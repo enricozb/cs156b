@@ -3,7 +3,7 @@ Contains trained neural networks
 
 ## Caching Data
 Use `data_parse.py` to cache the data for quick training access. Only cache
-what you need. If you need `base`, `valid`, and `qual`, do
+what you need. If you need `base`, `valid`, `probe`, and `qual`, do
 
 ```python
 import data_parse
