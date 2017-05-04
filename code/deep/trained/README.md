@@ -3,7 +3,7 @@ Contains trained neural networks
 
 ## Saving/Loading Models
 
-#### Saving
+### Saving
 Assuming `model` holds your Keras `Sequential` model:
 
 ```python
@@ -13,7 +13,7 @@ with open('model.a.json', 'wb') as json:
     model.save_weights('model.w.h5')
 ```
 
-#### Loading
+### Loading
 Load the `model.a.json` file to load the architecture of the model. Then load
 the weights from `model.w.h5`.
 
