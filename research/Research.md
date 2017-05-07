@@ -44,9 +44,9 @@ http://www.cs.toronto.edu/~rsalakhu/papers/nips07_pmf.pdf)
 * [Link text](URL)
 * Information
 
-### Blending
+### Boosting / Bagging / Blending
 * [Slides Blending Techniques from Team BigChaos](http://www.commendo.at/UserFiles/commendo/File/Presentation_GrandPrize.pdf)
-* Information
+* [Ensemble Selection from Libraries of Models](http://www.cs.cornell.edu/~caruana/ctp/ct.papers/caruana.icml04.icdm06long.pdf)
 
 ### Residual
 * [Link text](URL)
