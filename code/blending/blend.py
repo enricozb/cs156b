@@ -8,29 +8,33 @@ import numpy as np
 # N is the number of points that the algorithm is trained on
 def linear_regression(filenames):
 
-	# Get probe training & testing data
-	probe_data = get_probe_data()
-    # to minimize E_in, find w = psuedo-inverse of x * y
-    weight_vector = np.dot(np.linalg.pinv(data_points), y)
+	# Get probe data (filepath is known)
+	probe_data = get_data(filename="../../data/um/probe.dta")
 
-    # return the weight vector, too, for problem #6
-    return (weight_vector)
+	# Retrieve the correct probe classifications (third column)
+	_, _, probe_y = zip(*probe_data)
+
+	# Get the model data
+	model_data = []
+	for file in filenames:
+		model_data.append(file.readlines())
+
+	# to minimize Error_in, find w = psuedo-inverse of x * y
+	# Weight vector will be a list of linear coefficients of the models, in order of receipt
+	weight_vector = list(np.dot(np.linalg.pinv(data_points), y))
+
+	# Return the weight vector 
+	return weight_vector
 
 # returns probe data from known file location
-def get_probe_data(file=""):
+def get_data(filename):
+	with open(filename) as file:
+		return file.readlines()
 
+# Return linear coefficients on each model
+def blend(filenames, blend_type="linear_regression"):
+	if blend_type == "linear_regression":
+		return linear_regression(filenames)
+	return -1
 
-def blend(filenames, type="linear_regression")
-	return linear_regression(filenames)
-
-
-
-
-
-
-
-
-
-
-
-# Return coefficients on each model
+print(blend(["test.dta"]))

@@ -47,6 +47,8 @@ http://www.cs.toronto.edu/~rsalakhu/papers/nips07_pmf.pdf)
 ### Boosting / Bagging / Blending
 * [Slides Blending Techniques from Team BigChaos](http://www.commendo.at/UserFiles/commendo/File/Presentation_GrandPrize.pdf)
 * [Ensemble Selection from Libraries of Models](http://www.cs.cornell.edu/~caruana/ctp/ct.papers/caruana.icml04.icdm06long.pdf)
+* [[Video] Techniques to improve the accuracy of predictive models](https://www.r-bloggers.com/RUG/2013/10/video-techniques-to-improve-the-accuracy-of-predictive-models/)
+* [Kaggle Ensembling Guide](https://mlwave.com/kaggle-ensembling-guide/)
 
 ### Residual
 * [Link text](URL)

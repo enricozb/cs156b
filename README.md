@@ -30,25 +30,6 @@ The "research" folder will be used to store research papers & other handouts tha
 
 This project uses C++ 14, following the [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html). 
 
-## Weekly Assignments 
-Keep it short.
-
-| Week | Anthony   | Borba                                      | Deacon                     | Goeckner-Wald               | Yang                         |
-|:----:|-----------|--------------------------------------------|----------------------------|-----------------------------|------------------------------|
-|   1  | -         | Set up repo                                | Timelines & workloads      | Readme.md, Links.md         | Timelines & workloads        |
-|   2  | SVM       | Create set-up test file. Parsing, SVD, RNN | Deep Learning, Neural Nets | k-NN, Boltzmann Machines, issues & milestones    | Decision Trees (Boosted, RF) |
-|   3  | More SVM  | Parsing, SVD                             | Deep Learning, Neural Nets | k-NN, Boltzmann Machines, presentation   | Decision Trees (Boosted, RF)                            |
-|   4  | -         | -                                          | -                          | -                           | -                            |
-|   5  | -         | -                                          | -                          | -                           | -                            |
-|   6  | -         | -                                          | -                          | -                           | -                            |
-|   7  | -         | -                                          | -                          | -                           | -                            |
-|   8  | -         | -                                          | -                          | -                           | -                            |
-|   9  | -         | -                                          | -                          | -                           | -                            |
-|   10 | -         | -                                          | -                          | -                           | -                            |
-
-
-
-
 
 
 
