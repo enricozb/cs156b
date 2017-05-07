@@ -48,7 +48,9 @@ http://www.cs.toronto.edu/~rsalakhu/papers/nips07_pmf.pdf)
 * [Slides Blending Techniques from Team BigChaos](http://www.commendo.at/UserFiles/commendo/File/Presentation_GrandPrize.pdf)
 * [Ensemble Selection from Libraries of Models](http://www.cs.cornell.edu/~caruana/ctp/ct.papers/caruana.icml04.icdm06long.pdf)
 * [[Video] Techniques to improve the accuracy of predictive models](https://www.r-bloggers.com/RUG/2013/10/video-techniques-to-improve-the-accuracy-of-predictive-models/)
+* [Feature-Weighted Linear Stacking](https://arxiv.org/pdf/0911.0460.pdf)
 * [Kaggle Ensembling Guide](https://mlwave.com/kaggle-ensembling-guide/)
+* [[Code] Kaggle Ensembling Guide](https://github.com/MLWave/Kaggle-Ensemble-Guide)
 
 ### Residual
 * [Link text](URL)
