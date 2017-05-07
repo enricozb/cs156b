@@ -46,9 +46,9 @@ def get_data(filename, filetype):
 			return -1
 
 # Return linear coefficients on each model
+# filenames = [filename of model 1, filename of model 2, ...]
+# blend_type is linear_regression only, for now
 def blend(filenames, blend_type="linear_regression"):
 	if blend_type == "linear_regression":
 		return linear_regression(filenames)
 	return -1
-
-print(blend(["test.dta", "test.dta"]))
