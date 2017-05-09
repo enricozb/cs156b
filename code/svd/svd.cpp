@@ -1,9 +1,12 @@
 #include <Eigen/Sparse>
 #include <vector>
 #include <iostream>
+#include <fstream>
 #include <string>
 #include <math.h>
+#include <random>
 #include "parse.hpp"
+#include "svd.hpp"
 
 using namespace Eigen;
 
@@ -11,44 +14,35 @@ typedef Eigen::SparseMatrix<double> sp_mat;
 typedef Eigen::Matrix<double, Dynamic, Dynamic, RowMajor> mat;
 typedef Eigen::Triplet<double> triplet;
 
-class SVD {
-    sp_mat &A;                      // Dataset as a sparse matrix
-    mat &U, &V;                     // Factor matrices
-    double lambda;
-    double lrate;
-    int K;                          // Number of latent factors
-    std::vector<triplet> &points;   // Dataset as triplets
+SVD::SVD(sp_mat &A, mat &U, mat &V, std::vector<triplet> &points, int K) :
+    A(A), U(U), V(V), K(K), points(points) {
 
-    double mu = 0;  // average rating
-    mat Ub;         // user biases
-    mat Vb;         // movie biases
+    U = MatrixXd::Constant(A.rows(), K, 0.1);
+    V = MatrixXd::Constant(A.cols(), K, 0.1);
 
-  public:
-    SVD(sp_mat &A, mat &U, mat &V, std::vector<triplet> &points, int K) :
-        A(A), U(U), V(V), K(K), points(points) {
+    mu = A.sum() / points.size();
+    A.makeCompressed();
 
-        U = MatrixXd::Constant(A.rows(), K, 0.1);
-        V = MatrixXd::Constant(A.cols(), K, 0.1);
+    std::cout << "Shifting by average" << std::endl;
+    A.coeffs() -= mu;
 
-        mu = A.sum() / points.size();
-        A.makeCompressed();
-
-        std::cout << "Shifting by average" << std::endl;
-        A.coeffs() -= mu;
-
-        lrate = 0.001;
-        lambda = 0.02;
-        this->train(1000);
-    };
-
-    double predict(int uid, int mid);
-    void train(int iterations);
-    void predict(std::string infile_s, std::string outfile_s);
-    void save(int curr_iter);
+    lrate = 0.001;
+    lambda = 0.02;
+    this->train(1000);
 };
+
+PMF::PMF(sp_mat &A, mat &U, mat &V, std::vector<triplet> &points, int K) :
+    SVD(A, U, V, points, K) {
+    distribution = std::normal_distribution<double>(0.0, noise);
+}
 
 double SVD::predict(int uid, int mid) {
     return mu + U.row(uid).dot(V.row(mid));
+}
+
+double PMF::predict(int uid, int mid) {
+    double raw = mu + U.row(uid).dot(V.row(mid));
+    return distribution(generator) + raw;
 }
 
 void SVD::train(int iterations) {
@@ -83,11 +77,11 @@ void SVD::train(int iterations) {
 
         if (i % 100 == 0) {
             std::ostringstream oss;
-            oss << "predictions/qual-K" << K << "-I" << i << ".dat";
+            oss << "predictions/pmf-qual-K" << K << "-I" << i << ".dat";
             this->predict("../../data/um/qual.dta", oss.str());
 
             oss.str("");
-            oss << "predictions/probe-K" << K << "-I" << i << ".dat";
+            oss << "predictions/pmf-probe-K" << K << "-I" << i << ".dat";
             this->predict("../../data/um/probe.dta", oss.str());
 
             this->save(i);
@@ -98,11 +92,11 @@ void SVD::train(int iterations) {
 void SVD::save(int curr_iter) {
     std::cout << "Saving matrices to" << std::endl;
     std::ostringstream oss;
-    oss << "predictions/U-K" << K << "-I" << curr_iter << ".mat";
+    oss << "predictions/pmf-U-K" << K << "-I" << curr_iter << ".mat";
     std::ofstream u_file(oss.str());
 
     oss.str("");
-    oss << "predictions/V-K" << K << "-I" << curr_iter << ".mat";
+    oss << "predictions/pmf-V-K" << K << "-I" << curr_iter << ".mat";
     std::ofstream v_file(oss.str());
 
     u_file << U << std::endl;
@@ -123,13 +117,3 @@ void SVD::predict(const std::string infile_s, const std::string outfile_s) {
     }
 }
 
-int main() {
-    std::cout << "Loading data" << std::endl;
-    std::vector<triplet> points;
-    sp_mat A = parse::data_sp_mat(points);
-
-    mat U, V;
-    SVD svd(A, U, V, points, 100);
-    svd.predict("../../data/um/qual.dta", "qual-K100.dta");
-    svd.predict("../../data/um/probe.dta", "probe-K100.dta");
-}
