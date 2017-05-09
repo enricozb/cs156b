@@ -20,8 +20,8 @@ class SVD {
     std::vector<triplet> &points;   // Dataset as triplets
 
     double mu = 0;  // average rating
-    mat Ub;     // user biases
-    mat Vb;     // movie biases
+    mat Ub;         // user biases
+    mat Vb;         // movie biases
 
   public:
     SVD(sp_mat &A, mat &U, mat &V, std::vector<triplet> &points, int K) :
@@ -37,13 +37,14 @@ class SVD {
         A.coeffs() -= mu;
 
         lrate = 0.001;
-        lambda = 0.05;
-        this->train(10000);
+        lambda = 0.02;
+        this->train(1000);
     };
 
     double predict(int uid, int mid);
     void train(int iterations);
     void predict(std::string infile_s, std::string outfile_s);
+    void save(int curr_iter);
 };
 
 double SVD::predict(int uid, int mid) {
@@ -80,14 +81,32 @@ void SVD::train(int iterations) {
         std::cout << "Iteration " << i << ", rmse: "
                   << sqrt(total_err/points.size()) << std::endl;
 
-        if (i % 500 == 0) {
+        if (i % 100 == 0) {
             std::ostringstream oss;
-            oss << "predictions/prediction-K" << K << "-" << i << ".dat";
+            oss << "predictions/qual-K" << K << "-I" << i << ".dat";
+            this->predict("../../data/um/qual.dta", oss.str());
 
-            const std::string filename = oss.str();
-            this->predict("../../data/um/qual.dta", filename);
+            oss.str("");
+            oss << "predictions/probe-K" << K << "-I" << i << ".dat";
+            this->predict("../../data/um/probe.dta", oss.str());
+
+            this->save(i);
         }
     }
+}
+
+void SVD::save(int curr_iter) {
+    std::cout << "Saving matrices to" << std::endl;
+    std::ostringstream oss;
+    oss << "predictions/U-K" << K << "-I" << curr_iter << ".mat";
+    std::ofstream u_file(oss.str());
+
+    oss.str("");
+    oss << "predictions/V-K" << K << "-I" << curr_iter << ".mat";
+    std::ofstream v_file(oss.str());
+
+    u_file << U << std::endl;
+    v_file << V << std::endl;
 }
 
 void SVD::predict(const std::string infile_s, const std::string outfile_s) {
@@ -111,5 +130,6 @@ int main() {
 
     mat U, V;
     SVD svd(A, U, V, points, 100);
-    svd.predict("../../data/um/qual.dta", "prediction-10.dta");
+    svd.predict("../../data/um/qual.dta", "qual-K100.dta");
+    svd.predict("../../data/um/probe.dta", "probe-K100.dta");
 }
