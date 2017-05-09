@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include <math.h>
+#include <random>
 #include "parse.hpp"
 
 using namespace Eigen;
@@ -23,6 +24,11 @@ class SVD {
     mat Ub;     // user biases
     mat Vb;     // movie biases
 
+    // For PMF
+    std::default_random_engine generator;
+    double noise = sqrt (0.5); // vary this parameter
+    std::normal_distribution<double> distribution;
+
   public:
     SVD(sp_mat &A, mat &U, mat &V, std::vector<triplet> &points, int K) :
         A(A), U(U), V(V), K(K), points(points) {
@@ -36,18 +42,27 @@ class SVD {
         std::cout << "Shifting by average" << std::endl;
         A.coeffs() -= mu;
 
+        distribution = std::normal_distribution<double>(0.0, noise);
+
         lrate = 0.001;
         lambda = 0.05;
         this->train(10000);
     };
 
     double predict(int uid, int mid);
+    double PMFpredict(int uid, int mid);
     void train(int iterations);
     void predict(std::string infile_s, std::string outfile_s);
+    void PMFpredict(std::string infile_s, std::string outfile_s);
 };
 
 double SVD::predict(int uid, int mid) {
     return mu + U.row(uid).dot(V.row(mid));
+}
+
+double SVD::PMFpredict(int uid, int mid) {
+    double raw = mu + U.row(uid).dot(V.row(mid));
+    return distribution(generator) + raw;
 }
 
 void SVD::train(int iterations) {
@@ -104,12 +119,27 @@ void SVD::predict(const std::string infile_s, const std::string outfile_s) {
     }
 }
 
+void SVD::PMFpredict(const std::string infile_s, const std::string outfile_s) {
+    std::cout << "Predicting to: " << outfile_s << std::endl;
+    std::ifstream infile(infile_s);
+    std::ofstream outfile(outfile_s);
+
+    outfile.setf(std::ios_base::fixed, std::ios_base::floatfield);
+    outfile.precision(2);
+
+    int uid, mid, date;
+    while (infile >> uid >> mid >> date) {
+        outfile << this->PMFpredict(uid, mid) << std::endl;
+    }
+}
+
 int main() {
     std::cout << "Loading data" << std::endl;
     std::vector<triplet> points;
     sp_mat A = parse::data_sp_mat(points);
 
     mat U, V;
-    SVD svd(A, U, V, points, 100);
-    svd.predict("../../data/um/qual.dta", "prediction-10.dta");
+    SVD svd(A, U, V, points, 50);
+    //svd.predict("../../data/um/qual.dta", "prediction-10.dta");
+    svd.PMFpredict("../../data/um/qual.dta", "pmf-prediction.dta");
 }
