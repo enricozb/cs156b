@@ -1,0 +1,2 @@
+3x64-dropout-base.a.json filter=lfs diff=lfs merge=lfs -text
+3x64-dropout-base.w.h5 filter=lfs diff=lfs merge=lfs -text
