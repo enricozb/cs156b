@@ -9,6 +9,7 @@
 #include <random>
 #include <map>
 #include "parse.hpp"
+#include "datum.hpp"
 
 #define NUM_MOVIES 17770
 #define NUM_USERS 458293
@@ -21,13 +22,6 @@ using namespace Eigen;
 typedef Eigen::SparseMatrix<double> sp_mat;
 typedef Eigen::Matrix<double, Dynamic, Dynamic, RowMajor> mat;
 typedef Eigen::Triplet<double> triplet;
-
-typedef struct {
-    int uid;
-    int mid;
-    int date;
-    int rating;
-} datum;
 
 class SVD {
   protected:

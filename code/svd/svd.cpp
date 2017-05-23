@@ -122,8 +122,6 @@ void SVD::predict(const std::string infile_s, const std::string outfile_s) {
 // Doing linear modelling of user biases as described in https://pdfs.semanticscholar.org/8451/c2812a1476d3e13f2a509139322cc0adb1a2.pdf
 
 // In order, the things that still need to be implemented: 
-// TODO have a way to access rating given user, movie, AND date
-// TODO figure out how to train alpha
 // TODO add in time element for movie bias
 // TODO do linear+ (add single-day effect)
 // TODO add the ++ part of TimeSVD++
@@ -131,11 +129,8 @@ void SVD::predict(const std::string infile_s, const std::string outfile_s) {
  TimeSVDpp::TimeSVDpp(sp_mat &A, mat &U, mat &V, 
             std::vector<triplet> &points, int K,
             std::vector<datum> &data) : SVD(A, U, V, points, K), data(data) {
-    // we ask for points here bc SVD constructor requires it
-    // but we won't actually use it (... I think)
-    // it can be a NULL pointer for all we care
-    // that's probably better so we don't waste memory...
-    // we will use data in its place
+    // points is never used in training once U and V are created
+    // so we should toss it? TODO
 
     std::cout << "Initializing..." << std::endl;
     // Go through entire dataset to calculate:

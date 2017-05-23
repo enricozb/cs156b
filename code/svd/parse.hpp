@@ -3,6 +3,7 @@
 
 #include <Eigen/Sparse>
 #include <vector>
+#include "datum.hpp"
 
 namespace parse {
 
@@ -10,6 +11,7 @@ typedef Eigen::Triplet<double> triplet;
 typedef Eigen::SparseMatrix<double> sp_mat;
 
 void fill_data_vector(std::vector<triplet> &values);
+void fill_data_vector(std::vector<datum> &values);
 
 sp_mat data_sp_mat(std::vector<triplet> &values);
 
