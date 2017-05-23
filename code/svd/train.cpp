@@ -9,7 +9,9 @@ void svd() {
     sp_mat A = parse::data_sp_mat(points);
 
     mat U, V;
-    // SVD svd = ___;
+    SVD svd(A, U, V, points, 50);
+    svd.train(1000);
+    svd.predict("../../data/um/qual.dta", "pmf-prediction.dta");  
 }
 
 void pmf() {
@@ -19,6 +21,7 @@ void pmf() {
 
     mat U, V;
     PMF pmf(A, U, V, points, 50);
+    pmf.train(1000);
     pmf.predict("../../data/um/qual.dta", "pmf-prediction.dta");  
 }
 
@@ -32,11 +35,13 @@ void timesvdpp() {
     mat U, V;
     TimeSVDpp tsp(A, U, V, points, 50, data);
     tsp.train(1000);
+
+    tsp.predict("../../data/um/qual.dta", "tsp-prediction.dta");  
 }
 
 int main() {
-    //svd();
+    svd();
     //pmf();
-    timesvdpp();
+    //timesvdpp();
 }
 
